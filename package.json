@@ -4,7 +4,8 @@
   "description": "Repositório do curso Cypress Playground da Escola Talking About Testing.",
   "scripts": {
     "test": "cypress run",
-    "cy:open": "cypress open"
+    "cy:open": "cypress open",
+    "test:cloud": "cypress run --record"
   },
   "keywords": [
     "Cypress Playground",
