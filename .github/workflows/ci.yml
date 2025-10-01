@@ -1,0 +1,14 @@
+name: End-to-end tests # nome do nossso fluxo de integração continua
+on: push # Quando ele vai acontecer
+jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04 # Máquina que o teste vai ser executado
+    steps: # passos
+      - name: Checkout
+        uses: actions/checkout@v4 # baixa o projeto em um workspace no github
+      - name: Cypress run
+        uses: cypress-io/github-action@v6 # Executa os testes automatizados
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        with:
+          command: npm run test:cloud
