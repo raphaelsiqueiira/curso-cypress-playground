@@ -213,7 +213,7 @@ describe("Aplicação Cypress Playground", () => {
     cy.get("#date-paragraph > strong").should("have.text", date);
   });
 
-  it('digita no campo senha com dados informados no arquivo cypress.env.json. Depois marca e desmarca a caixa de seleção "Show password" e certifica de que a senha seja exibida e depois mascarada', () => {
+  it.only('digita no campo senha com dados informados no arquivo cypress.env.json. Depois marca e desmarca a caixa de seleção "Show password" e certifica de que a senha seja exibida e depois mascarada', () => {
     cy.get("input#password").as("inputPassword");
     cy.get("@inputPassword")
       .should("be.visible")
